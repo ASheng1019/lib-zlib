@@ -1,3 +1,19 @@
-config LIBZLIB
-	bool "zlib (pinned QUIC service dependency)"
-	depends on LIBMUSL
+# SPDX-License-Identifier: BSD-3-Clause
+menuconfig LIBZLIB
+	bool "zlib: Compression library"
+	depends on HAVE_LIBC
+	default n
+	help
+	  Build the general-purpose compression and checksum APIs.
+	  This port does not select a filesystem or mount configuration.
+
+if LIBZLIB
+config LIBZLIB_GZFILE
+	bool "gzip file I/O"
+	depends on HAVE_VFS
+	default y
+	help
+	  Include the gzopen/gzread/gzwrite family using the selected VFS.
+	  Disable for an in-memory-only consumer. Without this option the
+	  gz* file symbols are unavailable; gzip-format memory streams remain.
+endif

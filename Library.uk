@@ -1,1 +1,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
+name        := "zlib"
+description := "A general purpose data compression library."
+gitrepo     := "https://github.com/madler/zlib.git"
+homepage    := "https://zlib.net/"
+license     := "Zlib"
+version     := 1.3.2 sha256:bb329a0a2cd0274d05519d61c667c062e06990d72e125ee2dfa8de64f0119d16 https://github.com/madler/zlib/releases/download/v1.3.2/zlib-1.3.2.tar.gz
