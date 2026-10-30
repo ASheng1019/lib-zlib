@@ -1,6 +1,1 @@
-libzlib for Unikraft
-===================
-This is a port of zlib to Unikraft. 
-
-Please refer to the `README.md` as well as the documentation in the `doc/`
-subdirectory of the main unikraft repository for further information.
+Local modern-source companion to https://github.com/unikraft/lib-zlib at b48a887f069b10f457f7bf513a0362eb53ff99dc. Existing port is version 1.2.13; the c-ares port also selects the removed newlib path and forces IPv6. This isolated wrapper retains upstream sources and avoids changing the existing port or its ownership. Library modernization belongs in the existing port when preparing upstream submissions.
